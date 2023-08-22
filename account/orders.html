@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User Orders</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+      <span>Welcome, User!</span>
+      <div class="menu-icon" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+    <div class="menu-icon-desktop" onclick="toggleSidebar()">
+      <i class="fas fa-bars"></i>
+    </div>
+
+
+      <div class="sidebar" id="sidebar">
+        <h2>Dashboard</h2>
+        <ul>
+          <li>
+            <a href="index.php"><i class="fas fa-home"></i> Home</a>
+          </li>
+          <li>
+            <a href="profile.php"><i class="fas fa-user"></i> Profile</a>
+          </li>
+          <li>
+            <a href="/services.html"><i class="fas fa-box"></i> Services</a>
+          </li>
+          <li>
+            <a href="orders.html"><i class="fas fa-shopping-cart"></i> Orders</a>
+          </li>
+          <li>
+            <a href="topup.html"><i class="fas fa-wallet"></i> Top Up Wallet</a>
+          </li>
+          <li>
+            <a href="profile.php"><i class="fas fa-cog"></i> Settings</a>
+          </li>
+          <li>
+            <a href="/account/index.php"
+              ><i class="fas fa-sign-out-alt"></i> Logout</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="content">
+      <h1>Order History</h1>
+      <div class="order-list">
+        <div class="order-item">
+          <span>Order ID:</span>
+          <span>#12345</span>
+          <span>Date:</span>
+          <span>2023-07-18</span>
+          <span>Status:</span>
+          <span>Delivered</span>
+          <h3>Virtual SIM Card Numbers:</h3>
+          <ul class="sim-number-list">
+            <li>123-456-789</li>
+            <li>987-654-321</li>
+            <!-- Add more virtual SIM card numbers as needed -->
+          </ul>
+        </div>
+        <div class="order-item">
+          <span>Order ID:</span>
+          <span>#54321</span>
+          <span>Date:</span>
+          <span>2023-07-15</span>
+          <span>Status:</span>
+          <span>In Progress</span>
+          <h3>Virtual SIM Card Numbers:</h3>
+          <ul class="sim-number-list">
+            <li>111-222-333</li>
+            <li>444-555-666</li>
+            <!-- Add more virtual SIM card numbers as needed -->
+          </ul>
+        </div>
+        <!-- Add more order items as needed -->
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,400 @@
+/* Add your CSS styles for the admin dashboard here */
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+  }
+  
+  .sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #06002E;
+    padding-top: 20px;
+  }
+  
+  .sidebar h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .sidebar li:hover {
+    background-color: #FF8C00;
+  }
+  
+  .content {
+    margin-left: 250px;
+    padding: 20px;
+  }
+  
+  .section {
+    display: none;
+  }
+  
+  .section.active {
+    display: block;
+  }
+  
+  /* Add more styles as needed */
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .user-table th,
+  .user-table td {
+    padding: 12px 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .user-table th {
+    background-color: #06002E;
+    color: white;
+  }
+  
+  .user-table tr:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .user-table button {
+    padding: 6px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    background-color: #FF8C00;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .user-table button:hover {
+    background-color: #e67e00;
+  }
+  
+  /* Add responsive styles */
+  
+  @media screen and (max-width: 768px) {
+    .sidebar {
+      width: 100%;
+      position: relative;
+    }
+  
+    .content {
+      margin-left: 0;
+    }
+  }
+  /* Existing CSS for admin dashboard */
+
+.admin-section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .admin-section h2 {
+    color: #06002e;
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  
+  .admin-form {
+    margin-bottom: 16px;
+  }
+  
+  .admin-form .form-group {
+    margin-bottom: 8px;
+  }
+  
+  .admin-form label {
+    color: #06002e;
+    font-weight: bold;
+  }
+  
+  .admin-form input,
+  .admin-form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+  }
+  
+  .admin-form textarea {
+    resize: vertical;
+  }
+  
+  .admin-form button {
+    background-color: #ff8c00;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .admin-form button:hover {
+    background-color: #ff6f00;
+  }
+  
+  /* Style the table */
+  .table-container {
+    overflow-x: auto;
+    max-width: 100%;
+    margin-top: 16px;
+  }
+  
+  .service-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .service-table th,
+  .service-table td {
+    border: 1px solid #d1d1d1;
+    padding: 8px;
+  }
+  
+  .service-table th {
+    background-color: #06002e;
+    color: #ffffff;
+  }
+  
+  .service-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .service-table tbody tr:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .service-table button {
+    background-color: #ff8c00;
+    color: #ffffff;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .service-table button:hover {
+    background-color: #ff6f00;
+  }
+
+  /* Existing CSS for admin dashboard */
+
+.admin-section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .admin-section h2 {
+    color: #06002e;
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  
+  .admin-form {
+    margin-bottom: 16px;
+  }
+  
+  .admin-form .form-group {
+    margin-bottom: 8px;
+  }
+  
+  .admin-form label {
+    color: #06002e;
+    font-weight: bold;
+  }
+  
+  .admin-form input,
+  .admin-form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+  }
+  
+  .admin-form textarea {
+    resize: vertical;
+  }
+  
+  .admin-form button {
+    background-color: #ff8c00;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .admin-form button:hover {
+    background-color: #ff6f00;
+  }
+  
+  /* Style the table */
+  .table-container {
+    overflow-x: auto;
+    max-width: 100%;
+    margin-top: 16px;
+  }
+  
+  .service-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .service-table th,
+  .service-table td {
+    border: 1px solid #d1d1d1;
+    padding: 8px;
+  }
+  
+  .service-table th {
+    background-color: #06002e;
+    color: #ffffff;
+  }
+  
+  .service-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .service-table tbody tr:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .service-table button {
+    background-color: #ff8c00;
+    color: #ffffff;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .service-table button:hover {
+    background-color: #ff6f00;
+  }
+  /* Existing CSS for admin dashboard */
+
+/* Style the table */
+/* ... (existing code) ... */
+
+/* Additional styles for Country Management, Number Management, View Orders, and Payment Management tables */
+.country-table,
+.number-table,
+.order-table,
+.payment-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.country-table th,
+.country-table td,
+.number-table th,
+.number-table td,
+.order-table th,
+.order-table td,
+.payment-table th,
+.payment-table td {
+  border: 1px solid #d1d1d1;
+  padding: 8px;
+}
+
+.country-table th,
+.number-table th,
+.order-table th,
+.payment-table th {
+  background-color: #06002e;
+  color: #ffffff;
+}
+
+.country-table tbody tr:nth-child(even),
+.number-table tbody tr:nth-child(even),
+.order-table tbody tr:nth-child(even),
+.payment-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.country-table tbody tr:hover,
+.number-table tbody tr:hover,
+.order-table tbody tr:hover,
+.payment-table tbody tr:hover {
+  background-color: #e0e0e0;
+}
+
+.country-table button,
+.number-table button,
+.order-table button,
+.payment-table button {
+  background-color: #ff8c00;
+  color: #ffffff;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 4px;
+}
+
+.country-table button:hover,
+.number-table button:hover,
+.order-table button:hover,
+.payment-table button:hover {
+  background-color: #ff6f00;
+}
+
+/* Existing styles for the admin dashboard */
+/* ... (existing code) ... */
+
+/* Additional styles for User Statistics */
+.statistics {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .statistic {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .statistic h3 {
+    color: #06002e;
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  
+  .statistic p {
+    color: #ff8c00;
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  /* ... (existing styles for other sections) ... */
+  
+  /* Additional styles for Country Management, Number Management, View Orders, and Payment Management tables */
+  /* ... (existing code) ... */
+  
+

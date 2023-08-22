@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Admin Dashboard" />
+    <title>Admin Dashboard</title>
+    <!-- Include the necessary meta tags and CSS files here -->
+    <link rel="stylesheet" href="styles/reset.min.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/admin-dashboard.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <h2>Admin Dashboard</h2>
+      <ul>
+        <li class="active" onclick="showSection('user-management')">
+          User Management
+        </li>
+        <li onclick="showSection('service-management')">Service Management</li>
+        <li onclick="showSection('country-management')">Country Management</li>
+        <li onclick="showSection('number-management')">Number Management</li>
+        <li onclick="showSection('order-management')">View Orders</li>
+        <li onclick="showSection('payment-management')">Payment Management</li>
+        <li onclick="logout()">Logout</li>
+      </ul>
+    </div>
+    <div class="main">
+        <div class="admin-section">
+          <h2>User Statistics</h2>
+          <div class="statistics">
+            <div class="statistic">
+              <h3>Total Users</h3>
+              <p>1000</p>
+            </div>
+            <div class="statistic">
+              <h3>Active Users</h3>
+              <p>800</p>
+            </div>
+            <div class="statistic">
+              <h3>Inactive Users</h3>
+              <p>200</p>
+            </div>
+          </div>
+        </div>
+    <div class="content">
+      <div class="section user-management active">
+        <h2>User Management</h2>
+        <table class="user-table">
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>admin</td>
+            <td>admin@porcode.com</td>
+            <td>Admin</td>
+            <td>
+              <button>Edit</button>
+              <button>Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>john_doe</td>
+            <td>john_doe@porcode.com</td>
+            <td>User</td>
+            <td>
+              <button>Edit</button>
+              <button>Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>jane_doe</td>
+            <td>jane_doe@porcode.com</td>
+            <td>User</td>
+            <td>
+              <button>Edit</button>
+              <button>Delete</button>
+            </td>
+          </tr>
+          <!-- Add more users here -->
+          <tr>
+            <td>4</td>
+            <td>subscriber1</td>
+            <td>subscriber1@porcode.com</td>
+            <td>Subscriber</td>
+            <td>
+              <button>Edit</button>
+              <button>Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>subscriber2</td>
+            <td>subscriber2@porcode.com</td>
+            <td>Subscriber</td>
+            <td>
+              <button>Edit</button>
+              <button>Delete</button>
+            </td>
+          </tr>
+          <!-- Add more user rows as needed -->
+        </table>
+      </div>
+
+      <div class="section service-management">
+        <h2>Service Management</h2>
+        <!-- Add Service Form -->
+        <form id="addServiceForm" class="admin-form">
+          <div class="form-group">
+            <label for="serviceName">Service Name:</label>
+            <input type="text" id="serviceName" required />
+          </div>
+          <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea id="description" rows="4" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="price">Price:</label>
+            <input type="number" id="price" step="0.01" required />
+          </div>
+          <div class="form-group">
+            <button type="submit">Add Service</button>
+          </div>
+        </form>
+        <table class="service-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Price</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Instagram</td>
+              <td>Social media platform for sharing photos and videos</td>
+              <td>$200</td>
+              <td>
+                <button>Edit</button>
+                <button>Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Twitter</td>
+              <td>Microblogging and social networking platform</td>
+              <td>$150</td>
+              <td>
+                <button>Edit</button>
+                <button>Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Facebook</td>
+              <td>Popular social networking platform</td>
+              <td>$300</td>
+              <td>
+                <button>Edit</button>
+                <button>Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Fiverr</td>
+              <td>Freelance services marketplace</td>
+              <td>$100</td>
+              <td>
+                <button>Edit</button>
+                <button>Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>YouTube</td>
+              <td>Video sharing and streaming platform</td>
+              <td>$250</td>
+              <td>
+                <button>Edit</button>
+                <button>Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>WhatsApp</td>
+              <td>Instant messaging and voice calling application</td>
+              <td>$180</td>
+              <td>
+                <button>Edit</button>
+                <button>Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="section country-management">
+        <h2>Country Management</h2>
+        <!-- Add your country management content here -->
+        <form id="addCountryForm" class="admin-form">
+          <div class="form-group">
+            <label for="countryName">Country Name:</label>
+            <input type="text" id="countryName" required />
+          </div>
+          <div class="form-group">
+            <button type="submit">Add Country</button>
+          </div>
+        </form>
+        <!-- Country Table -->
+        <div class="table-container">
+          <table class="country-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Existing country rows go here -->
+              <tr>
+                <td>1</td>
+                <td>United States</td>
+                <td>
+                  <button class="delete-btn">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="section number-management">
+        <h2>Number Management</h2>
+        <form id="addNumberForm" class="admin-form">
+          <div class="form-group">
+            <label for="number">Number:</label>
+            <input type="text" id="number" required />
+          </div>
+          <div class="form-group">
+            <button type="submit">Add Number</button>
+          </div>
+        </form>
+        <!-- Number Table -->
+        <div class="table-container">
+          <table class="number-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Number</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Existing number rows go here -->
+              <tr>
+                <td>1</td>
+                <td>+1234567890</td>
+                <td>
+                  <button class="delete-btn">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- Add your number management content here -->
+      </div>
+
+      <div class="section order-management">
+        <h2>View Orders</h2>
+        <!-- Add your view orders content here -->
+        <div class="table-container">
+          <table class="order-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Order Date</th>
+                <th>Service</th>
+                <th>Country</th>
+                <th>Number</th>
+                <th>Payment Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Existing order rows go here -->
+              <tr>
+                <td>1</td>
+                <td>2022-01-15</td>
+                <td>Instagram</td>
+                <td>United States</td>
+                <td>+1234567890</td>
+                <td>Pending</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="section payment-management">
+        <h2>Payment Management</h2>
+        <!-- Add your payment management content here -->
+        <div class="table-container">
+          <table class="payment-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Order ID</th>
+                <th>Payment Date</th>
+                <th>Amount</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Existing payment rows go here -->
+              <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>2022-01-15</td>
+                <td>$100</td>
+                <td>Pending</td>
+                <td>
+                  <button class="approve-btn">Approve</button>
+                  <button class="decline-btn">Decline</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Porcode - Free Virtual Number to Receive SMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="account/userdashboard/styles.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <span>Welcome, User!</span>
+      <div class="menu-icon" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+    <div class="menu-icon-desktop" onclick="toggleSidebar()">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+      <h2>Dashboard</h2>
+      <ul>
+        <li>
+          <a href="index.php"><i class="fas fa-home"></i> Home</a>
+        </li>
+        <li>
+          <a href="profile.php"><i class="fas fa-user"></i> Profile</a>
+        </li>
+        <li>
+          <a href="/services.html"><i class="fas fa-box"></i> Services</a>
+        </li>
+        <li>
+          <a href="#"><i class="fas fa-shopping-cart"></i> Orders</a>
+        </li>
+        <li>
+          <a href="topup.html"><i class="fas fa-wallet"></i> Top Up Wallet</a>
+        </li>
+        <li>
+          <a href="profile.php"><i class="fas fa-cog"></i> Settings</a>
+        </li>
+        <li>
+          <a href="/account/index.php"
+            ><i class="fas fa-sign-out-alt"></i> Logout</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div class="content">
+      <h1>Free Virtual Number to Receive SMS</h1>
+      <p>
+        Welcome to Porcode! Here, you can use virtual numbers without
+        registration on our website. In the left window, you'll find numbers for
+        receiving SMS from England and the Netherlands. We recommend you to test
+        the service for free before using it extensively, as the replacement of
+        online numbers occurs periodically, without a fixed schedule.
+      </p>
+      <p>
+        You have the flexibility to receive repeated SMS to the same number.
+        However, please be aware that the content of incoming SMS in the right
+        window is visible to all users of the website. Therefore, exercise
+        caution when using the numbers for verification on various websites. The
+        free number works for receiving any SMS, except for messages from
+        payment systems.
+      </p>
+      <p>
+        After trying out our "Receive SMS online" services, we encourage you to
+        register on the Porcode website and explore our private phone numbers at
+        an attractive price without any restrictions.
+      </p>
+
+      <h2>Select Number</h2>
+      <div class="number-section">
+        <p>SMS activation | Receiving SMS online to virtual numbers Gb</p>
+        <p>+447459792125</p>
+      </div>
+
+      <h2>Messages</h2>
+      <div class="message-list">
+        <div class="message-item">
+          <p>The number was added 6 hours ago</p>
+        </div>
+        <div class="message-item">
+          <p>From: +123456789</p>
+          <p>Message: Your verification code is 123456.</p>
+          <p>Received: 6 hours ago</p>
+        </div>
+        <div class="message-item">
+          <p>From: +123456789</p>
+          <p>Message: Your verification code is 123456.</p>
+          <p>Received: 6 hours ago</p>
+        </div>
+        <div class="message-item">
+          <p>From: +123456789</p>
+          <p>Message: Your verification code is 123456.</p>
+          <p>Received: 6 hours ago</p>
+        </div>
+        <!-- Add more message items as needed -->
+      </div>
+    </div>
+
+    <script>
+      // Get the sidebar element and menu icon
+      const sidebar = document.getElementById("sidebar");
+      const menuIcon = document.querySelector(".menu-icon");
+
+      // Function to toggle the sidebar
+      function toggleSidebar() {
+        sidebar.classList.toggle("active");
+      }
+
+      // Add an event listener to the menu icon
+      menuIcon.addEventListener("click", toggleSidebar);
+    </script>
+  </body>
+</html>

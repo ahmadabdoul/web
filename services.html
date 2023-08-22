@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="English">
+  <head>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="PORCODES" />
+    <title>PORCODES - Services</title>
+    <!-- Include the necessary meta tags and CSS files here -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css"
+    />
+    <link rel="stylesheet" href="styles/reset.min.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/services.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/slider.css" type="text/css" media="all" />
+    <!-- Create a new CSS file for services -->
+  </head>
+  <body>
+    <div class="navbar">
+      <span>Welcome, User!</span>
+      <div class="menu-icon" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+      <h2>Dashboard</h2>
+      <ul>
+        <li>
+          <a href="account/userdashboard/index.php"
+            ><i class="fas fa-home"></i> Home</a
+          >
+        </li>
+        <li>
+          <a href="account/userdashboard/profile.php"
+            ><i class="fas fa-user"></i> Profile</a
+          >
+        </li>
+        <li>
+          <a href="account/userdashboard/services.html"
+            ><i class="fas fa-box"></i> Services</a
+          >
+        </li>
+        <li>
+          <a href="account/userdashboard/orders.html"
+            ><i class="fas fa-shopping-cart"></i> Orders</a
+          >
+        </li>
+        <li>
+          <a href="account/userdashboard/topup.html"
+            ><i class="fas fa-wallet"></i> Top Up Wallet</a
+          >
+        </li>
+        <li>
+          <a href="account/userdashboard/profile.php"
+            ><i class="fas fa-cog"></i> Settings</a
+          >
+        </li>
+        <li>
+          <a href="/account/index.php"
+            ><i class="fas fa-sign-out-alt"></i> Logout</a
+          >
+        </li>
+      </ul>
+    </div>
+    <!-- Add a search bar for services -->
+    <div class="search-bar">
+      <input type="text" id="serviceSearch" placeholder="Search services..." />
+    </div>
+
+    <!-- Add a container for the service items -->
+    <div class="services">
+      <h2>Select Service:</h2>
+      <div class="service-items">
+        <!-- Service items will be dynamically generated using JavaScript -->
+      </div>
+    </div>
+
+    <!-- Add a search bar for countries -->
+    <div class="search-bar">
+      <input type="text" id="countrySearch" placeholder="Search countries..." />
+    </div>
+
+    <div class="countries">
+      <h2>Select Country:</h2>
+      <div class="country-items">
+        <!-- Country items will be dynamically generated using JavaScript -->
+      </div>
+    </div>
+
+    <button id="submitBtn" type="submit">Submit</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>

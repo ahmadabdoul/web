@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Add the flag-icon-css stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css"
+    />
+    <style>
+      .services,
+      .countries {
+        margin-bottom: 20px;
+      }
+
+      .services h2,
+      .countries h2 {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .service-items,
+      .country-items {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .service-items label,
+      .country-items label {
+        display: flex;
+        align-items: center;
+        margin-right: 15px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .service-items input[type="radio"],
+      .country-items input[type="radio"] {
+        display: none;
+      }
+
+      .service-item,
+      .country-item {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border-radius: 4px;
+        background-color: #f2f2f2;
+        transition: background-color 0.3s ease;
+      }
+
+      .service-item:hover,
+      .country-item:hover {
+        background-color: #e0e0e0;
+      }
+
+      .service-item img,
+      .country-item img {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+      }
+
+      .service-item span,
+      .country-item span {
+        font-size: 14px;
+      }
+
+      #submitBtn {
+        display: block;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        background-color: #ff8c00;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      #submitBtn:hover {
+        background-color: #5cb300;
+      }
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <span>Welcome, User!</span>
+      <div class="menu-icon" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+      <!-- Sidebar content (omitted for brevity) -->
+    </div>
+
+    <div class="main-content">
+      <h2>Services</h2>
+      <div class="search-form">
+        <input
+          type="text"
+          id="search"
+          placeholder="Search for countries or services..."
+        />
+      </div>
+      <div class="services">
+        <h2>Select Service:</h2>
+        <div class="service-items">
+          <!-- Service items will be dynamically generated using JavaScript -->
+        </div>
+      </div>
+
+      <div class="countries">
+        <h2>Select Country:</h2>
+        <div class="country-items">
+          <!-- Country items will be dynamically generated using JavaScript -->
+        </div>
+      </div>
+      <button onclick="submitSelection()">Submit</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
