@@ -1,33 +1,16 @@
 <?php
+require 'assets/connection.php';
+require 'assets/inject.php';
+
 // Start a session to store and manage user data
 session_start();
-
-// Database configuration
-$hostname = 'localhost';
-$username = 'root';
-$password = '';
-$database = 'porcode_db';
-
-// Create a database connection
-$conn = mysqli_connect($hostname, $username, $password, $database);
-
-// Check connection
-if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
-}
-
-// Function to sanitize user input
-function sanitize_input($data)
-{
-  return htmlspecialchars(stripslashes(trim($data)));
-}
 
 // Handle form submissions
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   // Handle login form submission
   if (isset($_POST['login'])) {
-    $email = sanitize_input($_POST['email']);
-    $password = sanitize_input($_POST['password']);
+    $email = sanitizeInput($conn, $_POST['email']);
+    $password = sanitizeInput($conn, $_POST['password']);
 
     // Validate the input (you can add more validation here)
     if (empty($email) || empty($password)) {
@@ -63,9 +46,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   // Handle signup form submission
   if (isset($_POST['signup'])) {
-    $email = sanitize_input($_POST['email']);
-    $password = sanitize_input($_POST['password']);
-    $confirm_password = sanitize_input($_POST['confirm_password']);
+    $email = sanitizeInput($conn, $_POST['email']);
+    $password = sanitizeInput($conn, $_POST['password']);
+    $confirm_password = sanitizeInput($conn, $_POST['confirm_password']);
 
     // Validate the input (you can add more validation here)
     if (empty($email) || empty($password) || empty($confirm_password)) {
