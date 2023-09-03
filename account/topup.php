@@ -8,10 +8,10 @@ include_once 'header.php';
     <div class="main-content">
       <h2>Create Top Up</h2>
       <div class="top-up-form">
-        <form action='topup-step2.php' method='post'>
+        <form action='topup-step2.php' method='get'>
         <div class="payment-method">
           <h3>Select Payment Method:</h3>
-          <input type="radio" id="binance-pay" name="payment_method" />
+          <input type="radio" id="binance-pay" name="payment_method"  value="Binance" />
           <label for="binance-pay">
             <i class="fab fa-binance"></i> Binance Pay
           </label>
@@ -21,7 +21,7 @@ include_once 'header.php';
           </label>
           <input type="radio" id="paystack" name="payment_method" />
           <label for="paystack"> <i class="fas fa-wallet"></i> Paystack </label>
-          <input type="radio" id="manual" name="payment_method" />
+          <input type="radio" id="manual" name="payment_method" value="Manual" />
           <label for="manual">
             <i class="fas fa-hand-holding-usd"></i> Manual
           </label>
