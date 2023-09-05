@@ -5,6 +5,7 @@ $host = 'localhost';
 $username = 'root';
 $password = '';
 $database = 'porcode_db';
+$DOMAIN = "5sim.net";
 
 // Create a database connection
 $conn = mysqli_connect($host, $username, $password, $database);

@@ -36,13 +36,13 @@ if (!isset($_SESSION['user_id'])) {
     <h2>Dashboard</h2>
     <ul>
       <li>
-        <a href="index.php"><i class="fas fa-home"></i> Home</a>
+        <a href="dashboard.php"><i class="fas fa-home"></i> Home</a>
       </li>
       <li>
         <a href="profile.php"><i class="fas fa-user"></i> Profile</a>
       </li>
       <li>
-        <a href="/services.html"><i class="fas fa-box"></i> Services</a>
+        <a href="services.php"><i class="fas fa-box"></i> Services</a>
       </li>
       <li>
         <a href="#"><i class="fas fa-shopping-cart"></i> Orders</a>

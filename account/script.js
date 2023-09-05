@@ -32,31 +32,31 @@ const countryItemsContainer = document.querySelector('.country-items');
 const serviceRadios = document.querySelectorAll('input[name="service"]');
 const countryRadios = document.querySelectorAll('input[name="country"]');
 
-// Generate service items dynamically
-services.forEach(service => {
-  const serviceItem = document.createElement('label');
-  serviceItem.innerHTML = `
-    <input type="radio" name="service" value="${service.name.toLowerCase()}" />
-    <div class="service-item">
-      <img src="${service.logo}" alt="${service.name}" />
-      <span>${service.name}</span>
-    </div>
-  `;
-  serviceItemsContainer.appendChild(serviceItem);
-});
+// // Generate service items dynamically
+// services.forEach(service => {
+//   const serviceItem = document.createElement('label');
+//   serviceItem.innerHTML = `
+//     <input type="radio" name="service" value="${service.name.toLowerCase()}" />
+//     <div class="service-item">
+//       <img src="${service.logo}" alt="${service.name}" />
+//       <span>${service.name}</span>
+//     </div>
+//   `;
+//   serviceItemsContainer.appendChild(serviceItem);
+// });
 
 // Generate country items dynamically
-countries.forEach(country => {
-  const countryItem = document.createElement('label');
-  countryItem.innerHTML = `
-    <input type="radio" name="country" value="${country.name.toLowerCase()}" />
-    <div class="country-item">
-      <img src="flags/${country.flag}-flag.png" alt="${country.name}" />
-      <span>${country.name}</span>
-    </div>
-  `;
-  countryItemsContainer.appendChild(countryItem);
-});
+// countries.forEach(country => {
+//   const countryItem = document.createElement('label');
+//   countryItem.innerHTML = `
+//     <input type="radio" name="country" value="${country.name.toLowerCase()}" />
+//     <div class="country-item">
+//       <img src="flags/${country.flag}-flag.png" alt="${country.name}" />
+//       <span>${country.name}</span>
+//     </div>
+//   `;
+//   countryItemsContainer.appendChild(countryItem);
+// });
 
 // Event listeners for service radios
 serviceRadios.forEach(radio => {
