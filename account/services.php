@@ -10,18 +10,22 @@ if(mysqli_num_rows($result)>0){
         $percentage = $row['percentage'];
     }
   }
+  $sql = "SELECT balance FROM users WHERE 1";
+$result = mysqli_query($conn, $sql) or die($mysqli_error($conn));
+
+if(mysqli_num_rows($result)>0){
+    while($row = mysqli_fetch_assoc($result)){
+        $balance = $row['balance'];
+    }
+  }
 
 ?>
 
 
     <div class="main-content">
-      <h2>Services</h2>
+      Balance
       <div class="search-form">
-        <input
-          type="text"
-          id="search"
-          placeholder="Search for countries or services..."
-        />
+        <?php echo $balance; ?>
       </div>
       <div class="services">
         <h2>Select Service:</h2>

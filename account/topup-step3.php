@@ -38,11 +38,19 @@ if($_POST['submit']){
         if(empty($errors)==true){
             move_uploaded_file($file_tmp,"../uploads/".$file_name);
             $file_name = "uploads/".$file_name;
+
+            //generate order_id
+            $order_id = mt_rand(10000000, 99999999);
             //update database
             $sql = "INSERT INTO `topup` (`id`, `user_id`, `method`, `amount`, `receipt`, `date`, `status`) VALUES (NULL, '$user_id', '$payment_method', '$topup_amount', '$file_name', '$date', 'pending')";
             $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
-            if($result){
+            $sql2 = "INSERT INTO `transactions` (`id`, `user_id`, `type`, `order_id`, `amount`, `creation_date`, `status`) 
+            VALUES (NULL, '$user_id', 'topup', '$order_id', '$topup_amount', '$date', 'pending')";
+             $result2 = mysqli_query($conn, $sql2) or die(mysqli_error($conn));
+
+
+            if($result && $result2){
                 ?><script>
                 alert('Upload successfull! Our account department will review and verify your payment shortly');
                 history.back()
