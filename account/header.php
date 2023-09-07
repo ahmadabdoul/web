@@ -19,6 +19,7 @@ if (!isset($_SESSION['user_id'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
 </head>
 
 <body>
@@ -45,7 +46,7 @@ if (!isset($_SESSION['user_id'])) {
         <a href="services.php"><i class="fas fa-box"></i> Services</a>
       </li>
       <li>
-        <a href="#"><i class="fas fa-shopping-cart"></i> Orders</a>
+        <a href="orders.php"><i class="fas fa-shopping-cart"></i> Orders</a>
       </li>
       <li>
         <a href="topup.php"><i class="fas fa-wallet"></i> Top Up Wallet</a>

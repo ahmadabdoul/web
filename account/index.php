@@ -70,14 +70,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
         // Insert the new user into the 'users' table
-        $sql = "INSERT INTO users (email, password) VALUES (?, ?)";
+        $sql = "INSERT INTO users (email, password, balance) VALUES (?, ?, ?)";
         $stmt = mysqli_prepare($conn, $sql);
-        mysqli_stmt_bind_param($stmt, 'ss', $email, $hashed_password);
+        mysqli_stmt_bind_param($stmt, 'ss', $email, $hashed_password, '0');
 
         if (mysqli_stmt_execute($stmt)) {
           // User registration successful, redirect to the login page
           $_SESSION['signup_success'] = 'Registration successful. You can now log in.';
-          header('Location: index.php');
+          $_SESSION['user_id'] = $user_id;
+        
+          header('Location: dashboard.php');
           exit();
         } else {
           $_SESSION['signup_error'] = 'Registration failed. Please try again later.';

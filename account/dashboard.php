@@ -1,7 +1,17 @@
 <?php
 
 include_once 'header.php';
+$user_id = $_SESSION['user_id'];
+$sql = "SELECT * FROM users WHERE id='$user_id'";
+$result = mysqli_query($conn, $sql) or die($mysqli_error($conn));
 
+if(mysqli_num_rows($result)>0){
+    while($row = mysqli_fetch_assoc($result)){
+        $balance = $row['balance'];
+        $username = $row['username'];
+        $email = $row['email'];
+    }
+  }
 
 ?>
 
@@ -16,11 +26,15 @@ include_once 'header.php';
     <div class="profile-info">
       <div class="profile-item">
         <span>Name:</span>
-        <span><?php echo $_SESSION['user_name'] ?? ''; ?></span>
+        <span><?php echo $username ?? ''; ?></span>
       </div>
       <div class="profile-item">
         <span>Email:</span>
-        <span><?php echo $_SESSION['user_email'] ?? ''; ?></span>
+        <span><?php echo $email ?? ''; ?></span>
+      </div>
+      <div class="profile-item">
+        <span>Balance:</span>
+        <span><?php echo $balance ?? ''; ?></span>
       </div>
       <!-- Add more profile information as needed -->
     </div>
@@ -29,8 +43,8 @@ include_once 'header.php';
     <div class="order-list">
       <?php
       // Query the database to get the user's recent orders
-      $user_id = $_SESSION['user_id'];
-      $sql = "SELECT order_id, order_date, order_status FROM orders WHERE user_id = ? ORDER BY order_date DESC LIMIT 5";
+
+      $sql = "SELECT order_id, created, status FROM activation_numbers WHERE user_id = ? ORDER BY created DESC LIMIT 5";
       $stmt = mysqli_prepare($conn, $sql);
       if ($stmt) {
         mysqli_stmt_bind_param($stmt, 'i', $user_id);
