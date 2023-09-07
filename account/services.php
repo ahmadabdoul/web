@@ -2,6 +2,8 @@
 
 include_once 'header.php';
 
+$user_id = $_SESSION['user_id']; 
+
 $sql = "SELECT * FROM profit WHERE 1";
 $result = mysqli_query($conn, $sql) or die($mysqli_error($conn));
 
@@ -10,7 +12,7 @@ if(mysqli_num_rows($result)>0){
         $percentage = $row['percentage'];
     }
   }
-  $sql = "SELECT balance FROM users WHERE 1";
+  $sql = "SELECT balance FROM users WHERE id='$user_id'";
 $result = mysqli_query($conn, $sql) or die($mysqli_error($conn));
 
 if(mysqli_num_rows($result)>0){
@@ -23,8 +25,13 @@ if(mysqli_num_rows($result)>0){
 
 
     <div class="main-content">
-      Balance
+      <p style="color:green"><?php echo @$_GET['success']; ?></p>
+      <p style="color:red"><?php echo @$_GET['error']; ?></p>
+      <h6>Balance</h6>
+        <form action='service-process.php' method='post'>
+
       <div class="search-form">
+        <input type='hidden' name='profit_percentage' value='<?php echo $percentage; ?>' />
         <?php echo $balance; ?>
       </div>
       <div class="services">
@@ -93,11 +100,13 @@ if (!empty($serviceData)) {
 <div class="countries">
         <h2>Cost:</h2>
         <div class="country-items">
-          <input typr='text' class='input' name='cost' id='cost' required disabled />
+          <input type='text' class='input' name='cost' id='cost' required disabled />
+          <input type='hidden' class='input' name='costh' id='costh' />
        
 </div>
 </div>
-      <button onclick="submitSelection()">Submit</button>
+      <button type='submit' name='submit'>Submit</button>
+</form>
     </div>
 
     <script src="script.js"></script>
@@ -181,6 +190,7 @@ if (!empty($serviceData)) {
     console.log('Total Cost:', totalCost);
 
     $('#cost').val(totalCost)
+    $('#costh').val(totalCost)
   });
 </script>
 </body>
