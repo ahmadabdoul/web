@@ -6,7 +6,7 @@ require 'assets/connection.php';
 require 'assets/inject.php';
 
 // Replace 'Your token' and '$DOMAIN' with your actual token and domain
-$token = 'eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDA4MjIwMDgsImlhdCI6MTY2OTI4NjAwOCwicmF5IjoiNjM1NDIwMWVlODYzNWUyYTQxYzkyMTUxOThhNzNiNmQiLCJzdWIiOjEyNTE1MDl9.ZThNaYQsW9nLbfGsmQYpJKW6Ga1qYq87gVrZ6KNIg27Yd7APsSnOev-1Cx4LVFNcZcfEvDNjow5-r-xPK6QiJTbJVLcPLuzO3-b0jbWXWjejYCAQG3vcQu9he-Vp2psFevnGVCJqDeDlsf4y32hCJvsiWufu2OcLXUdyVSFpEXb13bTM10s1sq4UeOekrDtWX3KK9Nli3HMuaxL_lFW_rtpVxBv3Ku61As5uB40_qGP1sl7qZzLEkVB5QKwkwNBF7cr-kLJmGlj200LAzWSzOyfQ7wE7s8oVmq5YkzZlosmXQOxwbEmGhI_aAkyPSmafO0kV6ORtj-xNGVeTW3Ly1A';
+$token = '';
 $domain = '5sim.net';
 
 $user_id = $_SESSION['user_id'];
