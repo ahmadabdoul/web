@@ -27,10 +27,16 @@ if(mysqli_num_rows($result)>0){
     <div class="main-content">
       <p style="color:green"><?php echo @$_GET['success']; ?></p>
       <p style="color:red"><?php echo @$_GET['error']; ?></p>
+      <ul>
+          <li>A number will expire 20 minutes after purchase</li>
+          <li>Expired numbers will have the status of TIMEOUT</li>
+          <li>After a number is used, it's status will change to FINISHED</li>
+</ul>
       <h6>Balance</h6>
         <form action='service-process.php' method='post'>
 
       <div class="search-form">
+       
         <input type='hidden' name='profit_percentage' value='<?php echo $percentage; ?>' />
         <?php echo $balance; ?>
       </div>

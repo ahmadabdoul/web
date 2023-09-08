@@ -27,7 +27,7 @@ $domain = '5sim.net';
 <tbody>
   <?php
 
-    $sql = "SELECT * FROM activation_numbers WHERE user_id='$user_id'";
+    $sql = "SELECT * FROM activation_numbers WHERE user_id='$user_id' ORDER BY created DESC LIMIT 5";
     $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
     if(mysqli_num_rows($result)>0){
       while($row = mysqli_fetch_assoc($result)){
